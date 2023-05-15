@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+
+    font-family: Montserrat;
+}
+
+h2 {
+    margin-top: 20px;   
+    font-size: 1.875em;
+
+    font-family: Montserrat;
+}
+
+h3 {
+    margin-top: 20px;   
+    
+    font-family: Montserrat;
+}
+
+h4 {
+    margin-top: 20px;   
+    
+    font-family: Montserrat;
+}
+
+h5 {
+    margin-top: 20px;   
+    
+    font-family: Montserrat;
+}
+
+h6 {
+    margin-top: 20px;   
+    
+    font-family: Montserrat;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 0.875em;;
+
+    font-family: Open-Sans;
+}
+
+button {
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: #19376D;
+    border: 0;
+    color: white;
+    padding: 10px;
+}
+
+button:hover {
+    filter: brightness(0.9);
+}
+
+#top-bar button {
+    border-radius: 0;
+    background-color: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.title {
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/*-----*/
+
+br {
+    display: block;
+    margin-top: 10px;
+    content: "";
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 100%;
+}
+
+#top-bar {
+    height: 15vh;
+    width: 100%;
+    background-color: #0B2447;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#menu {
+    background-color: #19376D;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#title {
+    text-align: center;
+    height: 70%;
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner {
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    position: relative;
+
+    font-family: Open-Sans;
+}
+
+#banner-main {
+    width: 110%;
+    height: 110%;
+    background-color: #0B2447;
+    object-fit: cover;
+    
+    animation: infinite;
+    animation-name: banner;
+    animation-duration: 60s;
+    animation-timing-function: cubic-bezier(0.5, 0.2, 0.2, 0.5);
+}
+
+#banner-overlay {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 200vw;
+    height: 200vh;
+
+    /*Note: Offset 50% due to masking*/
+    left: -100vw;
+    top: -100vh;
+    
+    transform-origin: center;
+    backdrop-filter: blur(4px);
+    -webkit-mask-image: radial-gradient(400px at 50% 50%, transparent 50%, black 100%);
+    mask-image: radial-gradient(400px at 50% 50%, transparent 50%, black 100%);
+}
+
+#banner-content {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+}
+
+#banner-content > .left {
+    margin: 5vw;
+    width: 50%;
+    height: 75%;
+
+    position: relative;
+}
+
+#banner-content > .left > .background {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 30px;
+    filter: opacity(0.4);
+}
+
+#banner-content > .left > .content {
+    margin: 5%;
+    color: white;
+    
+    position: absolute;
+    top: 0;
+}
+
+@media (max-width: 575px) {
+    #banner-content > .left > .content > p, h6 {
+        display: none;
+    }
+}
+
+.menuButton {
+    color: white;
+    background-color: inherit;
+    border: 0;
+    width: 10em;
+}
+
+.menuButton:hover {
+    filter: brightness(0.8);
+}
+
+@keyframes banner {
+    0% {transform: translate(0%, 0%);}
+    50% {transform: translate(-5%, -5%);}
+    100% {transform: translate(0%, 0%);}
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../Fonts/Montserrat/static/Montserrat-Black.ttf")
+}
+
+@font-face {
+    font-family: Open-Sans;
+    src: url("../Fonts/OpenSans/static/OpenSans-Regular.ttf");
+}
+
+.container {
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+/*-----*/
+
+@media only screen and (max-width: 575px) {
+    .hide-phone {
+        display: none;
+    }
+
+    #banner-content > .left {
+        width: 100%;
+    }
+
+    #banner-content > .left > .content {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 575px) {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hide-desktop {
+        display: none;
+    }
+}

@@ -2,7 +2,7 @@
 {
     const randomN = Math.floor(Math.random() * 5) + 1;
 
-    const src = "./Images/Banner/Background" + randomN + ".jpg";
+    const src = "../Images/Banner/Background" + randomN + ".jpg";
 
     document.getElementById("banner").children[0].setAttribute("src", src);
 }

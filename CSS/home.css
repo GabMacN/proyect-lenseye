@@ -1,0 +1,51 @@
+#banner-overlay {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 200vw;
+    height: 200vh;
+
+    /*Note: Offset 50% due to masking*/
+    left: -100vw;
+    top: -100vh;
+    
+    transform-origin: center;
+    backdrop-filter: blur(4px);
+    -webkit-mask-image: radial-gradient(400px at 50% 50%, transparent 50%, black 100%);
+    mask-image: radial-gradient(400px at 50% 50%, transparent 50%, black 100%);
+}
+
+#banner-content {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+}
+
+#banner-content > .left {
+    margin: 5vw;
+    width: 50%;
+    height: 75%;
+
+    position: relative;
+}
+
+#banner-content > .left > .background {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 30px;
+    filter: opacity(0.4);
+}
+
+#banner-content > .left > .content {
+    margin: 5%;
+    color: white;
+    
+    position: absolute;
+    top: 0;
+}

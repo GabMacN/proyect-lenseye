@@ -1,20 +1,110 @@
-#banner-overlay {
-    position: absolute;
-    z-index: 2;
-    pointer-events: none;
-    width: 200vw;
-    height: 200vh;
+#banner-content > .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
 
-    /*Note: Offset 50% due to masking*/
-    left: -100vw;
-    top: -100vh;
-    
-    transform-origin: center;
-    backdrop-filter: none;
-    -webkit-mask-image: radial-gradient(400px at 50% 50%, transparent 50%, black 100%);
-    mask-image: radial-gradient(400px at 50% 50%, transparent 50%, black 100%);
+    height: 100%;
+
+    justify-content: center;
 }
 
-.filter-button {
-    
+#banner-content > .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0B2447;
+    color: rgb(215, 215, 215);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+
+    height: 100%;
+}
+
+#banner-content > .right img {
+    object-fit: cover;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+#banner-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2.5%;
+}
+
+.banner-button {
+    background-image: url("../Images/Banner/Background1.jpg");
+    background-size: cover;
+    filter: brightness(0.3) hue-rotate(0);
+
+    height: 10vw;
+    width: 10vw;
+
+    border-radius: 100%;
+    color: white;
+    font-size: 1.25vw;
+    text-align: center;
+
+    transition-duration: 0.25s;
+
+    margin: 1%;
+}
+
+.banner-button:hover {
+    filter: brightness(1) hue-rotate(30deg);
+
+    transition-duration: 0.25s;
+}
+
+.banner-button-selected {
+    filter: brightness(1) hue-rotate(30deg);
+
+    transition-duration: 0.25s;
+}
+
+.image-blurred {
+    filter: blur(5px);
+}
+
+.image-amd {
+    filter: blur(5px) grayscale(0.75) sepia(0.5);
+}
+
+.effect {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#effect-dr {
+    opacity: 75%;
+    filter: blur(5px);
+}
+
+#effect-amd {
+    top: 12.5%;
+    object-fit: contain !important;
+    height: 75% !important;
+
+    filter: contrast(0.35);
+
+    -webkit-mask-image: radial-gradient(9vw at 50% 50%, black 60%, transparent 80%);
+    mask-image: radial-gradient(9vw at 50% 50%, black 60%, transparent 80%);
+}
+
+#effect-glaucoma {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    opacity: 100%;
+
+    display: flex;
+
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 45%, rgb(0,0,0,0.8) 60%);
+    background-size: 100% 150%;
+    background-position: -50%;
 }

@@ -32,11 +32,13 @@
     right: 0;
 }
 
-#banner-content > .right img {
+#banner-content > .right > div * {
     object-fit: cover;
     border-radius: 50px;
     width: 100%;
     height: 50vh;
+
+    transition-duration: 0.5s;
 }
 
 #banner-button-container {
@@ -84,6 +86,10 @@
     filter: blur(5px) grayscale(0.75) sepia(0.5);
 }
 
+.image-cataract {
+    filter: brightness(1.5) contrast(1.5) blur(2px);
+}
+
 .effect {
     position: absolute;
     left: 0;
@@ -114,7 +120,7 @@
 
     display: flex;
 
-    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 45%, rgb(0,0,0,0.8) 60%);
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 45%, rgb(0,0,0,1) 60%);
     background-size: 100% 150%;
     background-position: -50%;
 }

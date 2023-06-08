@@ -44,25 +44,28 @@
                         </p>
 
                         <div id="banner-button-container">
-                            <button class="banner-button">Blurred Vision</button>
-                            <button class="banner-button">Diabetic Retinopathy</button>
-                            <button class="banner-button">Age-Related Macular Degeneration</button>
-                            <button class="banner-button">Glaucoma</button>
-                            <button class="banner-button">Cataract</button>
+                            <button class="banner-button" btype=0>Visión Normal</button>
+                            <button class="banner-button" btype=1>Visión Borrosa</button>
+                            <button class="banner-button" btype=2>Retinopatía Diabética</button>
+                            <button class="banner-button" btype=3>Degeneración Macular por la Edad</button>
+                            <button class="banner-button" btype=4>Glaucoma</button>
+                            <button class="banner-button" btype=5>Catarata</button>
                         </div>
                     </div>
 
                     <div class = "right">
-                        <h2 class="title hide-phone" style="text-align: center; font-size: 3vw; font-family: Montserrat;">
+                        <h2 id="problem-title" class="title hide-phone" style="text-align: center; font-size: 3vw; font-family: Montserrat;">
                             Blurred Vision
                         </h2>
 
                         <div style="margin-top: 2.5%; height: 50%; width: 100%; position: relative;">
-                            <img src="../Images/Clouds.jpg" class="image-amd" />
+                            <img id="main-image" src="../Images/Clouds.jpg" class="image-blurred" />
+                            <img id="effect-dr" class="effect" src="../Images/Effects/AMD.png" />
                             <img id="effect-amd" class="effect" src="../Images/Effects/AMD.png" />
+                            <div id="effect-glaucoma" class="effect"></div>
                         </div>
                         
-                        <p class="hide-phone" style="font-size: 1em; margin-top: 2.5%;">
+                        <p id="problem-description" class="hide-phone" style="font-size: 1em; margin-top: 2.5%;">
                             Hay varios tipos de problemas de visión que pueden afectar nuestra calidad de vida. En LENSEYE,
                             entendemos la importancia de una visión clara y nítida, y nos enorgullece ofrecer soluciones ópticas de
                             vanguardia para abordar estas preocupaciones. Si lo desea, puede ver todos los problemas que pueden
@@ -70,6 +73,8 @@
                             un resumen detallado sobre el problema específico y cómo nuestras gafas pueden ayudarlo a superarlo.
                         </p>
                     </div>
+
+                    <script src="../JS/stadistics.js"></script>
                 </div>
             </div>
         </main>

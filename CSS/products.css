@@ -1,0 +1,31 @@
+#banner {
+    height: fit-content;
+}
+
+#banner-content {
+    justify-content: flex-start;
+}
+
+#banner-content > .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+
+    height: 100%;
+}
+
+#banner-content > .right {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0B2447;
+    color: rgb(215, 215, 215);
+    padding: 5%;
+
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
